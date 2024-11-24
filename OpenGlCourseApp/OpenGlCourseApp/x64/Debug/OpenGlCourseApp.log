@@ -1,0 +1,15 @@
+﻿Main.obj : error LNK2019: unresolved external symbol __imp_glewInit referenced in function main
+Main.obj : error LNK2019: unresolved external symbol glfwInit referenced in function main
+Main.obj : error LNK2019: unresolved external symbol glfwTerminate referenced in function main
+Main.obj : error LNK2019: unresolved external symbol glfwWindowHint referenced in function main
+Main.obj : error LNK2019: unresolved external symbol glfwCreateWindow referenced in function main
+Main.obj : error LNK2019: unresolved external symbol glfwDestroyWindow referenced in function main
+Main.obj : error LNK2019: unresolved external symbol glfwWindowShouldClose referenced in function main
+Main.obj : error LNK2019: unresolved external symbol glfwGetFramebufferSize referenced in function main
+Main.obj : error LNK2019: unresolved external symbol glfwPollEvents referenced in function main
+Main.obj : error LNK2019: unresolved external symbol glfwMakeContextCurrent referenced in function main
+Main.obj : error LNK2019: unresolved external symbol glfwSwapBuffers referenced in function main
+Main.obj : error LNK2019: unresolved external symbol __imp_glewExperimental referenced in function main
+C:\Users\ferdi\source\repos\OpenGlCourseApp\..\..\External Libs\glew-2.1.0-win32\glew-2.1.0\lib\Release\Win32\glew32s.lib : warning LNK4272: library machine type 'x86' conflicts with target machine type 'x64'
+C:\Users\ferdi\source\repos\OpenGlCourseApp\..\..\External Libs\glfw-3.4.bin.WIN32\lib-vc2022\glfw3.lib : warning LNK4272: library machine type 'x86' conflicts with target machine type 'x64'
+C:\Users\ferdi\source\repos\OpenGlCourseApp\x64\Debug\OpenGlCourseApp.exe : fatal error LNK1120: 12 unresolved externals
