@@ -1,2 +1,2 @@
-﻿LINK : warning LNK4098: defaultlib 'MSVCRT' conflicts with use of other libs; use /NODEFAULTLIB:library
-  OpenGlCourseApp.vcxproj -> C:\Users\ferdi\source\repos\OpenGlCourseApp\Debug\OpenGlCourseApp.exe
+﻿  Main.cpp
+  OpenGlCourseApp.vcxproj -> C:\Users\ferdi\source\repos\FerdiaMT\OpenGlProject\OpenGlCourseApp\Debug\OpenGlCourseApp.exe
