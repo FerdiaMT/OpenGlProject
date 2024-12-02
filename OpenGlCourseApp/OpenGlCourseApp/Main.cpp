@@ -18,7 +18,7 @@ const GLint HEIGHT = 600;
 const float toRadians = 3.14159265f / 180.0f;
 
 
-GLuint VAO, VBO, shader , uniformModel;
+GLuint VAO, VBO, IBO, shader , uniformModel;
 
 bool direction = true;
 float triOffset = 0.0f;
@@ -41,38 +41,89 @@ static const char* vShader = "											\n\
 	layout (location = 0) in vec3 pos;									\n\
 																		\n\
 	uniform mat4 model;													\n\
+	out vec4 vCol;													 \n\
 	void main()															\n\
 	{																	\n\
 		gl_Position =  model *vec4(pos.x,pos.y,pos.z, 1.0);				\n\
+		vCol = vec4(clamp(pos, 0.0f, 1.0f) , 1.0f);						 \n\
 	}																	\n\
 ";
 
+//clamp means if value is out of 0 and 1 put it in
 static const char* fShader = "											\n\
 	#version 330														\n\
 																		\n\
+	in vec4 vCol;														\n\
 	out vec4 color;														\n\
 	void main()															\n\
 	{																	\n\
-		color = vec4(1.0,0.0,0.0,1.0);									\n\
+		color = vCol;													\n\
 	}																	\n\
 ";
 
+void moveFunction()
+{
 
+	if (direction) // if direction is true - > going to the right
+	{
+		triOffset += triIncrement;
+	}
+	else
+	{
+		triOffset -= triIncrement;
+	}
+
+	if (abs(triOffset) >= triMaxOffset)
+	{
+		direction = !direction;
+	}
+
+	curAngle += 0.01f;
+	if (curAngle >= 360)
+	{
+		curAngle -= 360;
+	}
+
+	if (sizeDirection)
+	{
+		curSize += 0.0001f;
+	}
+	else
+	{
+		curSize -= 0.0001f;
+	}
+
+	if (curSize >= maxSize || curSize <= minSize) {
+		sizeDirection = !sizeDirection;
+	}
+}
 
 void createTriangle() 
 {
+
+	unsigned int indices[] = {
+	0,3,1,
+	1,3,2,
+	2,3,0,
+	0,1,2
+	};
+
 	GLfloat vertices[] = {
 		-1.0f, -1.0f, 0.0f,
-		1.0f, -1.0f, 0.0f,
+		0.0f , -1.0f, 1.0f,
+		1.0f, -1.0f, 0.0f,	
 		0.0f, 1.0f, 0.0f
 	};
 
 	glGenVertexArrays(1, &VAO); // 1 is the amount of arrays we wanna make
 	glBindVertexArray(VAO);
 
+	glGenBuffers(1, &IBO);
+	glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, IBO);
+	glBufferData(GL_ELEMENT_ARRAY_BUFFER, sizeof(indices), indices, GL_STATIC_DRAW);
+
 	glGenBuffers(1, &VBO);
 	glBindBuffer(GL_ARRAY_BUFFER, VBO); // binds the current VBO(stores the little data) to the big box
-
 	glBufferData(GL_ARRAY_BUFFER, sizeof(vertices), vertices, GL_STATIC_DRAW);
 
 	glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 0, 0);
@@ -80,7 +131,9 @@ void createTriangle()
 	glEnableVertexAttribArray(0);
 
 	glBindBuffer(GL_ARRAY_BUFFER, 0);
+	
 	glBindVertexArray(0);
+	glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, 0);
 
 
 	// vertex array, this contains the vbo
@@ -172,7 +225,7 @@ int main()
 	glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
 	glfwWindowHint(GLFW_OPENGL_FORWARD_COMPAT, GL_TRUE);
 
-	GLFWwindow* mainWindow = glfwCreateWindow(WIDTH, HEIGHT, "TEST WINDOW", NULL, NULL);
+	GLFWwindow* mainWindow = glfwCreateWindow(WIDTH, HEIGHT, "FerdGraphics Engine Test V1.4", NULL, NULL);
 	if (!mainWindow) 
 	{
 		printf("GLFW window creation failed!");
@@ -187,7 +240,7 @@ int main()
 	glewExperimental = GL_TRUE;
 
 
-	if (glewInit() != GLEW_OK) 
+	if (glewInit() != GLEW_OK)
 	{
 		printf("GLEW INIT FAILED");
 		glfwDestroyWindow(mainWindow);
@@ -195,6 +248,7 @@ int main()
 		return 1;
 	}
 
+	glEnable(GL_DEPTH_TEST);
 	//setup viewport size
 
 	glViewport(0, 0, bufferWidth, bufferHeight);
@@ -207,41 +261,10 @@ int main()
 		// GET AND HANDLE USER INPUT EVENTS
 		glfwPollEvents(); // has anything happened
 
-		if (direction) // if direction is true - > going to the right
-		{
-			triOffset += triIncrement;
-		}
-		else
-		{
-			triOffset -= triIncrement;
-		}
-
-		if (abs(triOffset) >= triMaxOffset)
-		{
-			direction = !direction;
-		}
-
-		curAngle += 0.01f;
-		if (curAngle >= 360)
-		{
-			curAngle -= 360;
-		}
-
-		if (sizeDirection)
-		{
-			curSize += 0.0001f;
-		}
-		else
-		{
-			curSize -= 0.0001f;
-		}
-
-		if (curSize >= maxSize || curSize <=minSize) {
-			sizeDirection = !sizeDirection;
-		}
+		moveFunction();
 
 		glClearColor(0.0f, 0.0f, 0.0f,1.0f);
-		glClear(GL_COLOR_BUFFER_BIT);
+		glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
 		glUseProgram(shader);
 
@@ -250,22 +273,21 @@ int main()
 							   // 0 0 1 0 
 							   // 0 0 0 1
 		
-		model = glm::rotate(model, curAngle * toRadians, glm::vec3(0.0f, 0.0f, 1.0f));
-		model = glm::translate(model, glm::vec3(triOffset, 0.0f, 0.0f));
+		model = glm::rotate(model, curAngle * toRadians, glm::vec3(1.0f, 1.0f,0.0f));
+		//model = glm::translate(model, glm::vec3(triOffset, 0.0f, 0.0f));
 		
-		model = glm::scale(model, glm::vec3(curSize, curSize, 1.0f));
-
-
+		model = glm::scale(model, glm::vec3(0.4f, 0.4f, 1.0f));
 
 		glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
 
-
 		glBindVertexArray(VAO);
+		glBindBuffer(GL_ELEMENT_ARRAY_BUFFER,IBO);
 
-		glDrawArrays(GL_TRIANGLES, 0, 3);
+
+		glDrawElements(GL_TRIANGLES, 12, GL_UNSIGNED_INT, 0);
 
 		glBindVertexArray(0);
-
+		glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, 0);
 		glUseProgram(0);
 
 		glfwSwapBuffers(mainWindow);
