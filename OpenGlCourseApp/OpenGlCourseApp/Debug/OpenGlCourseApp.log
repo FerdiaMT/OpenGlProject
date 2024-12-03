@@ -1,4 +1,2 @@
 ﻿  Main.cpp
-C:\Users\ferdi\source\repos\FerdiaMT\OpenGlProject\OpenGlCourseApp\OpenGlCourseApp\Main.cpp(31,15): warning C4305: 'initializing': truncation from 'double' to 'float'
-C:\Users\ferdi\source\repos\FerdiaMT\OpenGlProject\OpenGlCourseApp\OpenGlCourseApp\Main.cpp(32,15): warning C4305: 'initializing': truncation from 'double' to 'float'
   OpenGlCourseApp.vcxproj -> C:\Users\ferdi\source\repos\FerdiaMT\OpenGlProject\OpenGlCourseApp\Debug\OpenGlCourseApp.exe
