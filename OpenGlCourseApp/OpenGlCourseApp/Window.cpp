@@ -21,6 +21,7 @@ Window::Window(GLint windowWidth, GLint windowHeight)
 	xChange = 0.0f;
 	yChange = 0.0f;
 
+
 	for (size_t i = 0; i < 1024; i++)
 	{
 		keys[i] = false;

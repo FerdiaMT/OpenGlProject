@@ -1,9 +1,7 @@
-﻿  Window.cpp
-C:\Users\ferdi\source\repos\FerdiaMT\OpenGlProject\OpenGlCourseApp\OpenGlCourseApp\Window.cpp(135,22): warning C4244: '=': conversion from 'double' to 'GLfloat', possible loss of data
-C:\Users\ferdi\source\repos\FerdiaMT\OpenGlProject\OpenGlCourseApp\OpenGlCourseApp\Window.cpp(136,22): warning C4244: '=': conversion from 'double' to 'GLfloat', possible loss of data
-C:\Users\ferdi\source\repos\FerdiaMT\OpenGlProject\OpenGlCourseApp\OpenGlCourseApp\Window.cpp(140,28): warning C4244: '=': conversion from 'double' to 'GLfloat', possible loss of data
-C:\Users\ferdi\source\repos\FerdiaMT\OpenGlProject\OpenGlCourseApp\OpenGlCourseApp\Window.cpp(141,40): warning C4244: '=': conversion from 'double' to 'GLfloat', possible loss of data
-C:\Users\ferdi\source\repos\FerdiaMT\OpenGlProject\OpenGlCourseApp\OpenGlCourseApp\Window.cpp(143,21): warning C4244: '=': conversion from 'double' to 'GLfloat', possible loss of data
-C:\Users\ferdi\source\repos\FerdiaMT\OpenGlProject\OpenGlCourseApp\OpenGlCourseApp\Window.cpp(144,21): warning C4244: '=': conversion from 'double' to 'GLfloat', possible loss of data
-C:\Users\ferdi\source\repos\FerdiaMT\OpenGlProject\OpenGlCourseApp\OpenGlCourseApp\Window.cpp(82,1): warning C4715: 'Window::Initialise': not all control paths return a value
+﻿  Camera.cpp
+C:\Users\ferdi\source\repos\FerdiaMT\OpenGlProject\OpenGlCourseApp\OpenGlCourseApp\Camera.cpp(53,9): warning C4553: '==': result of expression not used; did you intend '='?
+  Main.cpp
+C:\Users\ferdi\source\repos\FerdiaMT\OpenGlProject\OpenGlCourseApp\OpenGlCourseApp\Main.cpp(84,15): warning C4244: 'initializing': conversion from 'double' to 'GLfloat', possible loss of data
+  Generating Code...
+LINK : warning LNK4098: defaultlib 'MSVCRT' conflicts with use of other libs; use /NODEFAULTLIB:library
   OpenGlCourseApp.vcxproj -> C:\Users\ferdi\source\repos\FerdiaMT\OpenGlProject\OpenGlCourseApp\Debug\OpenGlCourseApp.exe
