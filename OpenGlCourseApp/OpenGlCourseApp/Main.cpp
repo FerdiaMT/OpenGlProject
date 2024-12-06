@@ -36,25 +36,58 @@ static const char* fShader = "Shaders/shader.frag";
 void CreateObjects() 
 {
 	unsigned int indices[] = {
-		0, 3, 1,
-		1, 3, 2,
-		2, 3, 0,
-		0, 1, 2
+		//0, 3, 1,
+		//1, 3, 2,
+		//2, 3, 0,
+		//0, 1, 2
+
+		1,2,3,//a
+		3,4,1,
+		5,6,7,//b
+		7,8,9,
+
+		4,1,5,//c
+		5,8,4,
+		3,2,6,//d`
+		6,7,3,
+
+		
 	};
+
+	//   4   3
+	//
+	//   1   2
+ 
 
 	GLfloat vertices[] = {
-		-1.0f, -1.0f, 0.0f,
-		0.0f, -1.0f, 1.0f,
+		//-1.0f, -1.0f, 0.0f,
+		//0.0f, -1.0f, 1.0f,
+		//1.0f, -1.0f, 0.0f,
+		//0.0f, 1.0f, 0.0f
+		-1.0f,-1.0f, 0.0f,
 		1.0f, -1.0f, 0.0f,
-		0.0f, 1.0f, 0.0f
+		1.0f, 1.0f,  0.0f,
+		- 1.0f, 1.0f,0.0f,
+
+		-1.0f,-1.0f, 1.0f,
+		1.0f, -1.0f, 1.0f,
+		1.0f, 1.0f,  1.0f,
+		-1.0f, 1.0f, 1.0f,
+
+
+
+
 	};
 
+
+	int verCount = 3 * 8;
+
 	Mesh *obj1 = new Mesh();
-	obj1->CreateMesh(vertices, indices, 12, 12);
+	obj1->CreateMesh(vertices, indices, verCount,verCount);
 	meshList.push_back(obj1);
 
 	Mesh *obj2 = new Mesh();
-	obj2->CreateMesh(vertices, indices, 12, 12);
+	obj2->CreateMesh(vertices, indices, verCount, verCount); // ORIGINALLY WAS 12 FOR INDICES AND VERTICES
 	meshList.push_back(obj2);
 }
 
