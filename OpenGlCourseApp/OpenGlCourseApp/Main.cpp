@@ -1,8 +1,8 @@
+#define STB_IMAGE_IMPLEMENTATION
+
 #include <stdio.h>
 #include <string.h>
 #include <cmath>
-#define STB_IMAGE_IMPLEMENTATION
-
 #include <vector>
 
 #include <GL\glew.h>
@@ -16,6 +16,7 @@
 #include "Mesh.h"
 #include "Shader.h"
 #include "Camera.h"
+#include "Texture.h"
 
 const float toRadians = 3.14159265f / 180.0f;
 
@@ -23,6 +24,9 @@ Window mainWindow;
 Camera camera;
 std::vector<Mesh*> meshList;
 std::vector<Shader> shaderList;
+
+Texture brickTexture; //these would normally be in the mesh class 
+Texture dirtTexture;
 
 GLfloat deltaTime = 0.0f;
 GLfloat lastTime = 0.0f;
@@ -36,58 +40,36 @@ static const char* fShader = "Shaders/shader.frag";
 void CreateObjects() 
 {
 	unsigned int indices[] = {
-		//0, 3, 1,
-		//1, 3, 2,
-		//2, 3, 0,
-		//0, 1, 2
-
-		1,2,3,//a
-		3,4,1,
-		5,6,7,//b
-		7,8,9,
-
-		4,1,5,//c
-		5,8,4,
-		3,2,6,//d`
-		6,7,3,
-
-		
+		0, 3, 1,
+		1, 3, 2,
+		2, 3, 0,
+		0, 1, 2
 	};
-
-	//   4   3
-	//
-	//   1   2
  
+	//uv map
 
-	GLfloat vertices[] = {
-		//-1.0f, -1.0f, 0.0f,
-		//0.0f, -1.0f, 1.0f,
-		//1.0f, -1.0f, 0.0f,
-		//0.0f, 1.0f, 0.0f
-		-1.0f,-1.0f, 0.0f,
-		1.0f, -1.0f, 0.0f,
-		1.0f, 1.0f,  0.0f,
-		- 1.0f, 1.0f,0.0f,
+	// 01   11
 
-		-1.0f,-1.0f, 1.0f,
-		1.0f, -1.0f, 1.0f,
-		1.0f, 1.0f,  1.0f,
-		-1.0f, 1.0f, 1.0f,
+	// 00   10
 
 
+	GLfloat vertices[] = {//  u    v
+		-1.0f, -1.0f, 0.0f  ,0.0f,0.0f,
+		0.0f, -1.0f, 1.0f   ,0.5f,0.0f,
+		1.0f, -1.0f, 0.0f   ,1.0f,0.0f,
+		0.0f, 1.0f, 0.0f    ,0.5f,1.0f,
 
 
 	};
 
 
-	int verCount = 3 * 8;
 
 	Mesh *obj1 = new Mesh();
-	obj1->CreateMesh(vertices, indices, verCount,verCount);
+	obj1->CreateMesh(vertices, indices, 20,12);
 	meshList.push_back(obj1);
 
 	Mesh *obj2 = new Mesh();
-	obj2->CreateMesh(vertices, indices, verCount, verCount); // ORIGINALLY WAS 12 FOR INDICES AND VERTICES
+	obj2->CreateMesh(vertices, indices, 20, 12); // vertices and indeces size of array
 	meshList.push_back(obj2);
 }
 
@@ -108,6 +90,13 @@ int main()
 	CreateShaders();
 
 	camera = Camera( glm::vec3(0.0f, 0.0f, 0.0f), glm::vec3(0.0f, 1.0f, 0.0f), -90.0f, 0.0f, 5.00f, 1.0f);
+
+	brickTexture = Texture("Textures/dirt.png");//just gonna put dirt in both for now
+	brickTexture.LoadTexture();
+	dirtTexture = Texture("Textures/dirt.png");
+	dirtTexture.LoadTexture();
+
+	
 
 	GLuint uniformProjection = 0, uniformModel = 0, uniformView = 0;
 	glm::mat4 projection = glm::perspective(45.0f, (GLfloat)mainWindow.getBufferWidth() / mainWindow.getBufferHeight(), 0.1f, 100.0f);
@@ -144,6 +133,9 @@ int main()
 		glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
 		glUniformMatrix4fv(uniformProjection, 1, GL_FALSE, glm::value_ptr(projection));
 		glUniformMatrix4fv(uniformView, 1, GL_FALSE, glm::value_ptr(camera.calculateViewMatrix()));
+
+		brickTexture.UseTexture();
+
 		meshList[0]->RenderMesh();
 
 		model = glm::mat4(1.0f);
@@ -152,6 +144,9 @@ int main()
 		model = glm::translate(model, glm::vec3(0.0f, 1.0f, -2.5f));
 		model = glm::scale(model, glm::vec3(0.4f, 0.4f, 1.0f));
 		glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+
+		dirtTexture.UseTexture();
+
 		meshList[1]->RenderMesh();
 
 		glUseProgram(0);

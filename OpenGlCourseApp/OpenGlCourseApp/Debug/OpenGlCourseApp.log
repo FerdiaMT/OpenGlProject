@@ -1,3 +1,2 @@
-﻿  Main.cpp
-C:\Users\ferdi\source\repos\FerdiaMT\OpenGlProject\OpenGlCourseApp\OpenGlCourseApp\Main.cpp(119,15): warning C4244: 'initializing': conversion from 'double' to 'GLfloat', possible loss of data
+﻿  Texture.cpp
   OpenGlCourseApp.vcxproj -> C:\Users\ferdi\source\repos\FerdiaMT\OpenGlProject\OpenGlCourseApp\Debug\OpenGlCourseApp.exe
