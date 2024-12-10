@@ -1,12 +1,139 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\ferdi\\source\\repos\\FerdiaMT\\OpenGlProject\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\ferdi\\source\\repos\\FerdiaMT\\OpenGlProject\\OpenGlCourseApp\\OpenGlCourseApp\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:OpenGlCourseApp\\OpenGlCourseApp\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\ferdi\\source\\repos\\FerdiaMT\\OpenGlProject\\OpenGlCourseApp\\OpenGlCourseApp\\Window.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:OpenGlCourseApp\\OpenGlCourseApp\\Window.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\ferdi\\source\\repos\\FerdiaMT\\OpenGlProject\\OpenGlCourseApp\\OpenGlCourseApp\\Window.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:OpenGlCourseApp\\OpenGlCourseApp\\Window.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\ferdi\\source\\repos\\FerdiaMT\\OpenGlProject\\OpenGlCourseApp\\OpenGlCourseApp\\Shader.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:OpenGlCourseApp\\OpenGlCourseApp\\Shader.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\ferdi\\source\\repos\\FerdiaMT\\OpenGlProject\\OpenGlCourseApp\\OpenGlCourseApp\\Shader.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:OpenGlCourseApp\\OpenGlCourseApp\\Shader.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\ferdi\\source\\repos\\FerdiaMT\\OpenGlProject\\OpenGlCourseApp\\OpenGlCourseApp\\Mesh.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:OpenGlCourseApp\\OpenGlCourseApp\\Mesh.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\ferdi\\source\\repos\\FerdiaMT\\OpenGlProject\\OpenGlCourseApp\\OpenGlCourseApp\\Mesh.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:OpenGlCourseApp\\OpenGlCourseApp\\Mesh.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 6,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Window.h",
+              "DocumentMoniker": "C:\\Users\\ferdi\\source\\repos\\FerdiaMT\\OpenGlProject\\OpenGlCourseApp\\OpenGlCourseApp\\Window.h",
+              "RelativeDocumentMoniker": "OpenGlCourseApp\\OpenGlCourseApp\\Window.h",
+              "ToolTip": "C:\\Users\\ferdi\\source\\repos\\FerdiaMT\\OpenGlProject\\OpenGlCourseApp\\OpenGlCourseApp\\Window.h",
+              "RelativeToolTip": "OpenGlCourseApp\\OpenGlCourseApp\\Window.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-12-03T13:47:26.441Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Window.cpp",
+              "DocumentMoniker": "C:\\Users\\ferdi\\source\\repos\\FerdiaMT\\OpenGlProject\\OpenGlCourseApp\\OpenGlCourseApp\\Window.cpp",
+              "RelativeDocumentMoniker": "OpenGlCourseApp\\OpenGlCourseApp\\Window.cpp",
+              "ToolTip": "C:\\Users\\ferdi\\source\\repos\\FerdiaMT\\OpenGlProject\\OpenGlCourseApp\\OpenGlCourseApp\\Window.cpp",
+              "RelativeToolTip": "OpenGlCourseApp\\OpenGlCourseApp\\Window.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-12-03T13:47:25.246Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Shader.h",
+              "DocumentMoniker": "C:\\Users\\ferdi\\source\\repos\\FerdiaMT\\OpenGlProject\\OpenGlCourseApp\\OpenGlCourseApp\\Shader.h",
+              "RelativeDocumentMoniker": "OpenGlCourseApp\\OpenGlCourseApp\\Shader.h",
+              "ToolTip": "C:\\Users\\ferdi\\source\\repos\\FerdiaMT\\OpenGlProject\\OpenGlCourseApp\\OpenGlCourseApp\\Shader.h",
+              "RelativeToolTip": "OpenGlCourseApp\\OpenGlCourseApp\\Shader.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-12-03T13:47:23.439Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Shader.cpp",
+              "DocumentMoniker": "C:\\Users\\ferdi\\source\\repos\\FerdiaMT\\OpenGlProject\\OpenGlCourseApp\\OpenGlCourseApp\\Shader.cpp",
+              "RelativeDocumentMoniker": "OpenGlCourseApp\\OpenGlCourseApp\\Shader.cpp",
+              "ToolTip": "C:\\Users\\ferdi\\source\\repos\\FerdiaMT\\OpenGlProject\\OpenGlCourseApp\\OpenGlCourseApp\\Shader.cpp",
+              "RelativeToolTip": "OpenGlCourseApp\\OpenGlCourseApp\\Shader.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-12-03T13:47:21.798Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Mesh.h",
+              "DocumentMoniker": "C:\\Users\\ferdi\\source\\repos\\FerdiaMT\\OpenGlProject\\OpenGlCourseApp\\OpenGlCourseApp\\Mesh.h",
+              "RelativeDocumentMoniker": "OpenGlCourseApp\\OpenGlCourseApp\\Mesh.h",
+              "ToolTip": "C:\\Users\\ferdi\\source\\repos\\FerdiaMT\\OpenGlProject\\OpenGlCourseApp\\OpenGlCourseApp\\Mesh.h",
+              "RelativeToolTip": "OpenGlCourseApp\\OpenGlCourseApp\\Mesh.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-12-03T13:46:59.228Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Mesh.cpp",
+              "DocumentMoniker": "C:\\Users\\ferdi\\source\\repos\\FerdiaMT\\OpenGlProject\\OpenGlCourseApp\\OpenGlCourseApp\\Mesh.cpp",
+              "RelativeDocumentMoniker": "OpenGlCourseApp\\OpenGlCourseApp\\Mesh.cpp",
+              "ToolTip": "C:\\Users\\ferdi\\source\\repos\\FerdiaMT\\OpenGlProject\\OpenGlCourseApp\\OpenGlCourseApp\\Mesh.cpp",
+              "RelativeToolTip": "OpenGlCourseApp\\OpenGlCourseApp\\Mesh.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-12-03T13:46:57.603Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "main.cpp",
+              "DocumentMoniker": "C:\\Users\\ferdi\\source\\repos\\FerdiaMT\\OpenGlProject\\OpenGlCourseApp\\OpenGlCourseApp\\main.cpp",
+              "RelativeDocumentMoniker": "OpenGlCourseApp\\OpenGlCourseApp\\main.cpp",
+              "ToolTip": "C:\\Users\\ferdi\\source\\repos\\FerdiaMT\\OpenGlProject\\OpenGlCourseApp\\OpenGlCourseApp\\main.cpp",
+              "RelativeToolTip": "OpenGlCourseApp\\OpenGlCourseApp\\main.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-12-03T13:46:53.074Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
     }
   ]
 }
