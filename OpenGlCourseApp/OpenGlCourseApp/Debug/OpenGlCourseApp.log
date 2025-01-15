@@ -1,5 +1,6 @@
 ﻿  Main.cpp
-C:\Users\ferdi\source\repos\FerdiaMT\OpenGlProject\OpenGlCourseApp\OpenGlCourseApp\Main.cpp(108,15): warning C4244: 'initializing': conversion from 'double' to 'GLfloat', possible loss of data
-  Shader.cpp
-  Generating Code...
+C:\Users\ferdi\source\repos\FerdiaMT\OpenGlProject\OpenGlCourseApp\OpenGlCourseApp\Main.cpp(109,15): warning C4244: 'initializing': conversion from 'double' to 'GLfloat', possible loss of data
+C:\Users\ferdi\source\repos\FerdiaMT\OpenGlProject\OpenGlCourseApp\OpenGlCourseApp\Main.cpp(131,47): warning C4244: 'argument': conversion from 'GLuint' to 'GLfloat', possible loss of data
+C:\Users\ferdi\source\repos\FerdiaMT\OpenGlProject\OpenGlCourseApp\OpenGlCourseApp\Main.cpp(131,22): warning C4244: 'argument': conversion from 'GLuint' to 'GLfloat', possible loss of data
+LINK : warning LNK4098: defaultlib 'MSVCRT' conflicts with use of other libs; use /NODEFAULTLIB:library
   OpenGlCourseApp.vcxproj -> C:\Users\ferdi\source\repos\FerdiaMT\OpenGlProject\OpenGlCourseApp\Debug\OpenGlCourseApp.exe
